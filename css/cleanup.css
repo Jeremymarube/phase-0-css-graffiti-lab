@@ -1,1 +1,35 @@
-/* write your override styles here */
+/* tag-1 is a class, inside #wall */
+#wall .tag-1 {
+  display: none;
+}
+
+/* tag-2 is an ID, so we need to override it using more specificity */
+#wall #tag-2 {
+  display: none;
+}
+
+/* tag-3 has ID and two classes – override with more specificity */
+#wall #tag-3.slick.wicked {
+  display: none;
+}
+
+/* tag-4 is nested inside a div with class "parent" */
+#wall .parent #tag-4 {
+  display: none;
+}
+
+/* tag-5 also nested in .parent with class "slick" */
+#wall .parent #tag-5.slick {
+  display: none;
+}
+
+/* tag-6 is deeper inside nested divs */
+#wall .parent > div > div #tag-6 {
+  display: none;
+}
+
+/* tag-7 is similarly nested and has class "slick" */
+#wall .parent > div > #tag-7.slick {
+  display: none;
+}
+
